@@ -148,6 +148,7 @@ var shop = function() {
 };
 
 var endGame = function() {
+    console.log("endGame");
     // if player is still alive, player wins!
     if (playerInfo.health > 0) {
         window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + ".");
@@ -171,6 +172,8 @@ var startGame = function() {
             pickedEnemyObj.health = randomNumber(40, 60);
     
             fight(pickedEnemyObj);
+            endGame();
+            
             // if we're not at the last enemy in the array
             if (playerInfo.health > 0 && i < enemyInfo.length - 1) {
                 // ask if user wants to use the store before next round
@@ -187,7 +190,6 @@ var startGame = function() {
             break;
         }
     }
-    endGame();
 };
 
 startGame();

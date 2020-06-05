@@ -5,8 +5,20 @@ var randomNumber = function(min, max) {
     return value;
 };
 
+// function to set name
+var getPlayerName = function() {
+    var name = "";
+  
+    while (name === "" || name === null) {
+        name = window.prompt("What is your robot's name?");
+    }
+  
+    console.log("\"Your robot's name is \"" + name);
+    return name;
+};
+
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
@@ -148,7 +160,6 @@ var shop = function() {
 };
 
 var endGame = function() {
-    console.log("endGame");
     // if player is still alive, player wins!
     if (playerInfo.health > 0) {
         window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + ".");
@@ -173,7 +184,7 @@ var startGame = function() {
     
             fight(pickedEnemyObj);
             endGame();
-            
+
             // if we're not at the last enemy in the array
             if (playerInfo.health > 0 && i < enemyInfo.length - 1) {
                 // ask if user wants to use the store before next round

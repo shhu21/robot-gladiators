@@ -6,12 +6,17 @@
 # Table Of Contents
 
 * [Description](#description)
+* [Framework](#framework)
 * [Installation](#installation)
 * [User's Guide](#users-guide)
 * [Testing](#testing)
 
 # Description
-A robot fighting game using basic HTML and Javascript.
+A robot fighting game where a user can choose fight a randomly generated robot to gain points to use at the item shop for more game boosts.
+
+# Framework
+- HTML
+- Javascript
 
 # Installation
 Clone the repository.
